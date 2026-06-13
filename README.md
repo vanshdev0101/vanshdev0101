@@ -58,14 +58,12 @@
 
 <div align="center">
 
-![Vansh's GitHub stats](https://github-readme-stats.vercel.app/api?username=VanshRajput-dev&show_icons=true&theme=tokyonight&hide_border=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=VanshRajput-dev&layout=compact&theme=tokyonight&hide_border=true)
+![Vansh's GitHub stats](https://github-readme-stats.vercel.app/api?username=vanshdev0101&show_icons=true&theme=tokyonight&hide_border=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vanshdev0101&layout=compact&theme=tokyonight&hide_border=true)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=VanshRajput-dev&theme=tokyonight&hide_border=true)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=vanshdev0101&theme=tokyonight&hide_border=true)
 
 </div>
-
-> ⚠️ Replace `VanshRajput-dev` above with your actual GitHub username if different.
 
 ---
 
@@ -73,12 +71,10 @@
 
 | Project | Description |
 |---------|-------------|
-| 🎬 **AI Video Subtitle Generator (Chrome Extension)** | Generates real-time subtitles for videos using **Whisper AI**, improving accessibility for viewers. |
-| 🤟 **Sign Language Translation System** | Uses **AI & Computer Vision** to translate sign language gestures into text/speech in real time. |
-| ✈️ **Airport Management System** | A desktop application built with **Java & SQLite** to manage flights, passengers, and bookings. |
-| 🌐 **Web Development & Data Science Projects** | A collection of web apps and data-driven projects exploring ML models, dashboards, and full-stack solutions. |
-
-> 📌 *Pin these repositories on your GitHub profile for maximum visibility!*
+| 🛡️ **[RepoGuard](https://github.com/vanshdev0101/RepoGuard)** | A Python-based security/automation tool for monitoring and managing repositories. |
+| 🩻 **[VeritasXR – Chest X-Ray Diagnosis with Clinical Uncertainty](https://github.com/vanshdev0101/-VeritasXR-Chest-X-Ray-Diagnosis-with-Clinical-Uncertainty)** | An AI-powered chest X-ray diagnosis system that incorporates clinical uncertainty estimation using deep learning. |
+| 📧 **[Gmail Drive Automation](https://github.com/vanshdev0101/gmail_drive_automation-)** | A Python automation tool that streamlines workflows between Gmail and Google Drive. |
+| 🐾 **[Scrappy-coco](https://github.com/vanshdev0101/Scrappy-coco)** | A Python project exploring data scraping and dataset handling. |
 
 ---
 
@@ -96,9 +92,9 @@
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-id/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-github-id)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://your-portfolio-link.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vanshdev0101)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vanshdev0101@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vansh-portfoli.vercel.app/)
 
 </div>
 
