@@ -35,7 +35,7 @@ $ cat about.txt
 ## `$ ls -la ~/projects`
 
 ```console
-drwxr-xr-x  RepoGuard/          python    supply-chain security scanner
+
 drwxr-xr-x  VeritasXR/          python    chest x-ray diagnosis + uncertainty
 drwxr-xr-x  Orbit/              typescript  distributed job scheduler
 drwxr-xr-x  LaptopGuard/        typescript  windows endpoint monitor
