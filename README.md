@@ -57,7 +57,7 @@ Built after a fake OpenAI repo on Hugging Face was downloaded 244,000 times carr
 <td width="50%" valign="top">
 
 ### 🩻 [VeritasXR](https://github.com/vanshdev0101/-VeritasXR-Chest-X-Ray-Diagnosis-with-Clinical-Uncertainty)
-`python` · `pytorch` · `tensorrt` · `triton`
+`python` · `pytorch` · `tensorrt` 
 
 Dual-pathway CNN for pneumonia detection that learns local and global features in parallel, using inter-path disagreement as an intrinsic uncertainty signal for clinical triage.
 
