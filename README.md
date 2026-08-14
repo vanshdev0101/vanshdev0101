@@ -129,6 +129,16 @@ $ printf '%s\n' "$TOOLS"
 
 <br>
 
+## `$ uptime`
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com/?user=vanshdev0101&background=2D353B&hide_border=true&border_radius=8&stroke=475258&ring=A7C080&fire=E67E80&currStreakNum=D3C6AA&sideNums=D3C6AA&currStreakLabel=A7C080&sideLabels=859289&dates=859289" width="100%" alt="contribution streak" />
+
+</div>
+
+<br>
+
 <div align="center">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=vanshdev0101&bg_color=2D353B&color=D3C6AA&line=A7C080&point=E67E80&area=true&area_color=A7C080&title_color=A7C080&hide_border=true&custom_title=commit%20activity" width="100%" alt="commit activity" />
