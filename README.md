@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=600&size=24&duration=2800&pause=900&color=A7C080&center=true&vCenter=true&width=600&height=45&lines=vansh%40github%3A~%24+whoami;Data+Science+%40+SRM+%C2%B7+Chennai;ML+pipelines+%C2%B7+security+tooling+%C2%B7+Linux" alt="whoami" />
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=600&size=24&duration=2800&pause=900&color=A7C080&center=true&vCenter=true&width=600&height=45&lines=vansh%40github%3A~%24+whoami;CSE+(AI%2FML)+%40+SRM+%C2%B7+Chennai;ML+pipelines+%C2%B7+security+tooling+%C2%B7+Linux" alt="whoami" />
 
 <br>
 
@@ -18,7 +18,7 @@ vansh@github ~
 $ whoami
 
   Vansh Rajput
-  B.Tech Data Science · SRM Institute of Science and Technology · 2023–2027
+  B.Tech Computer Science and Engineering (AI/ML) · SRM Institute of Science and Technology · 2023–2027
   Chennai, India
 
 $ cat about.txt
