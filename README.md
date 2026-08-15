@@ -17,7 +17,7 @@
 vansh@github ~
 $ whoami
 
-  Vansh Rajput
+  Vansh C
   B.Tech Computer Science and Engineering (AI/ML) · SRM Institute of Science and Technology · 2023–2027
   Chennai, India
 
