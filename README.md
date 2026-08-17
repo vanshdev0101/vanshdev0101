@@ -138,7 +138,6 @@ $ printf '%s\n' "$TOOLS"
 </div>
 
 <br>
-
 <div align="center">
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=vanshdev0101&bg_color=2D353B&color=D3C6AA&line=A7C080&point=E67E80&area=true&area_color=A7C080&title_color=A7C080&hide_border=true&custom_title=commit%20activity" width="100%" alt="commit activity" />
