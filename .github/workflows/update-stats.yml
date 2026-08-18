@@ -22,17 +22,22 @@ jobs:
         run: |
           curl -sSf "https://github-readme-activity-graph.vercel.app/graph?username=vanshdev0101&bg_color=2D353B&color=D3C6AA&line=A7C080&point=E67E80&area=true&area_color=A7C080&title_color=A7C080&hide_border=true&custom_title=commit%20activity" -o profile/activity.new.svg
 
-      # If either fetch failed (service down/rate-limited) the .new.svg won't
-      # exist or will be an HTML error page, not SVG. Keep the last known-good
-      # snapshot in that case instead of overwriting it with garbage.
+      # If a fetch failed outright (service down) .new.svg won't exist or
+      # won't be SVG. But these services also return a *valid* SVG "Failed
+      # to retrieve contributions" error card on a transient GitHub API
+      # hiccup on their end - checking for "<svg" alone doesn't catch that,
+      # since the error card is itself well-formed SVG. Require a marker
+      # that only appears in real data, and reject known error text.
       - name: Validate and promote snapshots
         run: |
+          declare -A marker=( [streak]="Total Contributions" [activity]="Contributions" )
           for name in streak activity; do
-            if [ -s "profile/$name.new.svg" ] && head -c 200 "profile/$name.new.svg" | grep -q "<svg"; then
-              mv "profile/$name.new.svg" "profile/$name.svg"
+            f="profile/$name.new.svg"
+            if [ -s "$f" ] && grep -q "${marker[$name]}" "$f" && ! grep -qi "failed to retrieve\|error" "$f"; then
+              mv "$f" "profile/$name.svg"
             else
               echo "::warning::$name fetch looked invalid, keeping previous snapshot"
-              rm -f "profile/$name.new.svg"
+              rm -f "$f"
             fi
           done
 
