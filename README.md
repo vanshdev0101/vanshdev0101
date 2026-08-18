@@ -122,7 +122,6 @@ $ printf '%s\n' "$TOOLS"
 * building   ML model deployment — serving, quantisation, latency budgets
 * building   advanced DSA
 * shipped    a full Hyprland desktop shell in QML, upstreamed to surface-dots
-* organised  HackOfDuty, a campus hackathon
 * competed   Appathon · HackVers
 * built      web for Networking Nexus & ACM SIGKDD
 ```
