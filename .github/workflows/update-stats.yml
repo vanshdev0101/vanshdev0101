@@ -1,0 +1,45 @@
+name: Update profile stats
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # 08:30 IST daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch streak stats SVG
+        run: |
+          curl -sSf "https://streak-stats.demolab.com/?user=vanshdev0101&background=2D353B&hide_border=true&border_radius=8&stroke=475258&ring=A7C080&fire=E67E80&currStreakNum=D3C6AA&sideNums=D3C6AA&currStreakLabel=A7C080&sideLabels=859289&dates=859289" -o profile/streak.new.svg
+
+      - name: Fetch activity graph SVG
+        run: |
+          curl -sSf "https://github-readme-activity-graph.vercel.app/graph?username=vanshdev0101&bg_color=2D353B&color=D3C6AA&line=A7C080&point=E67E80&area=true&area_color=A7C080&title_color=A7C080&hide_border=true&custom_title=commit%20activity" -o profile/activity.new.svg
+
+      # If either fetch failed (service down/rate-limited) the .new.svg won't
+      # exist or will be an HTML error page, not SVG. Keep the last known-good
+      # snapshot in that case instead of overwriting it with garbage.
+      - name: Validate and promote snapshots
+        run: |
+          for name in streak activity; do
+            if [ -s "profile/$name.new.svg" ] && head -c 200 "profile/$name.new.svg" | grep -q "<svg"; then
+              mv "profile/$name.new.svg" "profile/$name.svg"
+            else
+              echo "::warning::$name fetch looked invalid, keeping previous snapshot"
+              rm -f "profile/$name.new.svg"
+            fi
+          done
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/streak.svg profile/activity.svg
+          git diff --cached --quiet || git commit -m "Update profile stats snapshot"
+          git push
