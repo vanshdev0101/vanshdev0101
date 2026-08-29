@@ -16,11 +16,11 @@ jobs:
 
       - name: Fetch streak stats SVG
         run: |
-          curl -sSf "https://streak-stats.demolab.com/?user=vanshdev0101&background=2D353B&hide_border=true&border_radius=8&stroke=475258&ring=A7C080&fire=E67E80&currStreakNum=D3C6AA&sideNums=D3C6AA&currStreakLabel=A7C080&sideLabels=859289&dates=859289" -o profile/streak.new.svg
+          curl -sS "https://streak-stats.demolab.com/?user=vanshdev0101&background=2D353B&hide_border=true&border_radius=8&stroke=475258&ring=A7C080&fire=E67E80&currStreakNum=D3C6AA&sideNums=D3C6AA&currStreakLabel=A7C080&sideLabels=859289&dates=859289" -o profile/streak.new.svg || true
 
       - name: Fetch activity graph SVG
         run: |
-          curl -sSf "https://github-readme-activity-graph.vercel.app/graph?username=vanshdev0101&bg_color=2D353B&color=D3C6AA&line=A7C080&point=E67E80&area=true&area_color=A7C080&title_color=A7C080&hide_border=true&custom_title=commit%20activity" -o profile/activity.new.svg
+          curl -sS "https://github-readme-activity-graph.vercel.app/graph?username=vanshdev0101&bg_color=2D353B&color=D3C6AA&line=A7C080&point=E67E80&area=true&area_color=A7C080&title_color=A7C080&hide_border=true&custom_title=commit%20activity" -o profile/activity.new.svg || true
 
       # If a fetch failed outright (service down) .new.svg won't exist or
       # won't be SVG. But these services also return a *valid* SVG "Failed
