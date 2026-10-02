@@ -36,22 +36,25 @@ $ cat about.txt
 
 ```console
 
-drwxr-xr-x  VeritasXR/          python    chest x-ray diagnosis + uncertainty
+drwxr-xr-x  Airlock/            python      supply-chain malware scanner
+drwxr-xr-x  VeritasXR/          python      chest x-ray diagnosis + uncertainty
+drwxr-xr-x  quiet-mic/          shell       pipewire echo cancellation
+drwxr-xr-x  ghostseat/          c++         flexnet licence-log root cause
 drwxr-xr-x  Orbit/              typescript  distributed job scheduler
 drwxr-xr-x  LaptopGuard/        typescript  windows endpoint monitor
-drwxr-xr-x  surface-dots/       qml       hyprland desktop shell
+drwxr-xr-x  surface-dots/       qml         hyprland desktop shell
 ```
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🛡️ [RepoGuard](https://github.com/vanshdev0101/RepoGuard)
+### 🛡️ [Airlock](https://github.com/vanshdev0101/Airlock)
 `python`
 
 AI-powered security scanner for Hugging Face and GitHub repositories. Detects malware, typosquatting, and supply-chain attacks **before you clone**.
 
-Built after a fake OpenAI repo on Hugging Face was downloaded 244,000 times carrying a multi-stage infostealer that bypassed Windows Defender. RepoGuard scores it **< 10 / 100**.
+Built after a fake OpenAI repo on Hugging Face was downloaded 244,000 times carrying a multi-stage infostealer that bypassed Windows Defender. Airlock scores it **< 10 / 100**.
 
 </td>
 <td width="50%" valign="top">
@@ -92,7 +95,41 @@ Real-time authenticated dashboard, reachable remotely over Tailscale.
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🎙️ [quiet-mic](https://github.com/vanshdev0101/quiet-mic)
+`shell` · `pipewire`
+
+Reboot-safe acoustic echo cancellation for PipeWire. The WebRTC AEC module ships with PipeWire, but no persistent working config existed, so this is one, plus a script that **measures** it: plays a tone, records raw vs. cancelled mic, and asserts the dB drop.
+
+Found and fixed a silent failure where a missing device made the check pass anyway.
+
+</td>
+<td width="50%" valign="top">
+
+### 👻 [ghostseat](https://github.com/vanshdev0101/ghostseat)
+`c++17` · `no dependencies`
+
+Root-cause analysis for FlexNet Publisher (`lmgrd`) licence logs. Rebuilds who held which seat across a log with no dates or session ids, and names why a checkout was denied, e.g. a *ghost seat* held by a client that is already gone.
+
+</td>
+</tr>
 </table>
+
+<br>
+
+## `$ git shortlog --upstream`
+
+Bug fixes sent to other people's projects.
+
+| project | change | status |
+|---|---|---|
+| [caelestia-dots/shell](https://github.com/caelestia-dots/shell/pull/1827) `qml` | Recorder UI desynced from recordings started by keybind; synced state with external recordings (#1805) | **merged** |
+| [Alexays/Waybar](https://github.com/Alexays/Waybar/pull/5247) `c++` | `hyprland/language` mis-parsed `activelayout` when a keyboard name contains parentheses; now splits on the last comma outside parens (#4586) | open |
+| [pytorch/pytorch](https://github.com/pytorch/pytorch/pull/198617) `python` | Reviewed someone else's `Normal.log_prob` overflow fix, stress-tested it independently: 569 cases across float32/64, CPU and CUDA, plus `gradcheck` | review comment |
+
+
 
 <br>
 
@@ -111,7 +148,7 @@ $ printf '%s\n' "$TOOLS"
   ml        pytorch · tensorrt · triton · scikit-learn · pandas · numpy
   backend   flask · express · node · postgres · sqlite
   frontend  next.js · typescript · html · css
-  systems   linux · hyprland · bash · git · rust (reading)
+  systems   linux · hyprland · pipewire · quickshell · bash · git · c++ · rust (reading)
 ```
 
 <br>
@@ -119,9 +156,12 @@ $ printf '%s\n' "$TOOLS"
 ## `$ git log --oneline --author=vansh`
 
 ```console
+* merged     caelestia-dots/shell #1827 — recorder state sync
+* open       Alexays/Waybar #5247 — hyprland/language parsing fix
+* shipped    quiet-mic (PipeWire AEC), ghostseat (licence-log RCA), Airlock
+* shipped    a full Hyprland desktop shell in QML, upstreamed to surface-dots
 * building   ML model deployment — serving, quantisation, latency budgets
 * building   advanced DSA
-* shipped    a full Hyprland desktop shell in QML, upstreamed to surface-dots
 * competed   Appathon · HackVers
 * built      web for Networking Nexus & ACM SIGKDD
 ```
