@@ -36,6 +36,7 @@ $ cat about.txt
 
 ```console
 
+drwxr-xr-x  disaster-comm/      c++/java    esp32 + lora disaster alert system
 drwxr-xr-x  Airlock/            python      supply-chain malware scanner
 drwxr-xr-x  VeritasXR/          python      chest x-ray diagnosis + uncertainty
 drwxr-xr-x  quiet-mic/          shell       pipewire echo cancellation
@@ -115,6 +116,18 @@ Root-cause analysis for FlexNet Publisher (`lmgrd`) licence logs. Rebuilds who h
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top">
+
+### 🌊 [disaster-comm](https://github.com/vanshdev0101/disaster-comm)
+`c++` · `java` · `spring boot` · `esp32` · `lora` · `postgres`
+
+End-to-end IoT disaster alert system. An ESP32 node reads water level, rain, flame and temperature and posts over Wi-Fi; when Wi-Fi or the server goes down it **falls back to LoRa** through a gateway and queues readings in flash, replaying them later with their true timestamps (31 of 31 recovered, zero duplicates).
+
+A Spring Boot control station raises incidents, messages the responsible officer on **Telegram**, and syncs to a hosted cloud (**Render + Neon Postgres**) with store-and-forward uploads. Tested on real hardware, including a full Wi-Fi outage.
+
+</td>
+</tr>
 </table>
 
 <br>
@@ -126,7 +139,7 @@ Bug fixes sent to other people's projects.
 | project | change | status |
 |---|---|---|
 | [caelestia-dots/shell](https://github.com/caelestia-dots/shell/pull/1827) `qml` | Recorder UI desynced from recordings started by keybind; synced state with external recordings (#1805) | **merged** |
-| [Alexays/Waybar](https://github.com/Alexays/Waybar/pull/5247) `c++` | `hyprland/language` mis-parsed `activelayout` when a keyboard name contains parentheses; now splits on the last comma outside parens (#4586) | open |
+| [Alexays/Waybar](https://github.com/Alexays/Waybar/pull/5247) `c++` | `hyprland/language` mis-parsed `activelayout` when a keyboard name contains parentheses; now splits on the last comma outside parens (#4586) | **merged** |
 | [pytorch/pytorch](https://github.com/pytorch/pytorch/pull/198617) `python` | Reviewed someone else's `Normal.log_prob` overflow fix, stress-tested it independently: 569 cases across float32/64, CPU and CUDA, plus `gradcheck` | review comment |
 
 
@@ -157,7 +170,8 @@ $ printf '%s\n' "$TOOLS"
 
 ```console
 * merged     caelestia-dots/shell #1827 — recorder state sync
-* open       Alexays/Waybar #5247 — hyprland/language parsing fix
+* merged     Alexays/Waybar #5247 — hyprland/language parsing fix
+* shipped    disaster-comm (ESP32 + LoRa + Spring Boot + cloud sync)
 * shipped    quiet-mic (PipeWire AEC), ghostseat (licence-log RCA), Airlock
 * shipped    a full Hyprland desktop shell in QML, upstreamed to surface-dots
 * building   ML model deployment — serving, quantisation, latency budgets
