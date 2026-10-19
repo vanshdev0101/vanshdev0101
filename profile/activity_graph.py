@@ -20,12 +20,12 @@ DAYS = 30
 
 # Everforest, matched to the existing card
 BG = "#2D353B"
-LINE = "#A7C080"
-AREA = "#A7C080"
+LINE = "#7FBBB3"
+AREA = "#7FBBB3"
 POINT = "#E67E80"
 TEXT = "#D3C6AA"
 MUTED = "#859289"
-TITLE = "#A7C080"
+TITLE = "#7FBBB3"
 GRID = "#475258"
 
 W, H = 1200, 420
