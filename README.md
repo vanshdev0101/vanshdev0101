@@ -182,21 +182,6 @@ $ printf '%s\n' "$TOOLS"
 
 <br>
 
-## `$ uptime`
-
-<div align="center">
-
-<img src="profile/streak.svg" width="100%" alt="contribution streak" />
-
-</div>
-
-<br>
-<div align="center">
-
-<a href="https://stats.uptimerobot.com/YOUR_PAGE_ID">
-  <img src="https://img.shields.io/uptimerobot/status/mYOUR_MONITOR_ID?label=service%20uptime&color=brightgreen" alt="Service Uptime" />
-</a>
-
 </div>
 <br>
 
