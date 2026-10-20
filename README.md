@@ -193,10 +193,11 @@ $ printf '%s\n' "$TOOLS"
 <br>
 <div align="center">
 
-<img src="profile/activity.svg" width="100%" alt="commit activity" />
+<a href="https://stats.uptimerobot.com/YOUR_PAGE_ID">
+  <img src="https://img.shields.io/uptimerobot/status/mYOUR_MONITOR_ID?label=service%20uptime&color=brightgreen" alt="Service Uptime" />
+</a>
 
 </div>
-
 <br>
 
 <div align="center">
