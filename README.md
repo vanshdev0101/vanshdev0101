@@ -61,16 +61,18 @@ Built after a fake OpenAI repo on Hugging Face was downloaded 244,000 times carr
 <td width="50%" valign="top">
 
 ### 🩻 [VeritasXR](https://github.com/vanshdev0101/-VeritasXR-Chest-X-Ray-Diagnosis-with-Clinical-Uncertainty)
-`python` · `pytorch` · `tensorrt` 
+`python` · `pytorch` · `onnx`
 
-Dual-pathway CNN for pneumonia detection that learns local and global features in parallel, using inter-path disagreement as an intrinsic uncertainty signal for clinical triage.
+Dual-pathway CNN trained from scratch on 26,684 chest radiographs (RSNA), measured against three ImageNet-pretrained CNNs under one shared protocol — three seeds each, paired bootstrap, Holm-corrected.
 
-| | latency | throughput |
+| | AUPRC | it/s |
 |---|---|---|
-| FP32 | 18.1ms | 55 img/s |
-| **TensorRT FP16** | **2.2ms** | **447 img/s** |
+| EfficientNet-B0 | **0.6993** | 3.66 |
+| **VeritasXR** 4.22M | 0.6410 | **7.94** |
 
-**8.1× speedup**, deployed on NVIDIA Triton.
+It loses on accuracy, and the study says why: the gap is pretraining, not architecture or capacity. The inter-path disagreement it is named for scores **AUROC 0.5334 — chance** — so it ships predictive entropy (0.7747) instead and keeps the negative result.
+
+[Live demo](https://vanshdev0101.github.io/-VeritasXR-Chest-X-Ray-Diagnosis-with-Clinical-Uncertainty/) — 16.9 MB ONNX in the browser, image never leaves the machine, and it refuses inputs that aren't chest X-rays (21/22 wrong body parts, 11/11 photographs).
 
 </td>
 </tr>
@@ -158,7 +160,7 @@ qml / lua   ██████                    active    hyprland desktop she
 ```console
 $ printf '%s\n' "$TOOLS"
 
-  ml        pytorch · tensorrt · triton · scikit-learn · pandas · numpy
+  ml        pytorch · onnx · tensorrt · triton · scikit-learn · pandas · numpy
   backend   flask · express · node · postgres · sqlite
   frontend  next.js · typescript · html · css
   systems   linux · hyprland · pipewire · quickshell · bash · git · c++ · rust (reading)
@@ -171,6 +173,7 @@ $ printf '%s\n' "$TOOLS"
 ```console
 * merged     caelestia-dots/shell #1827 — recorder state sync
 * merged     Alexays/Waybar #5247 — hyprland/language parsing fix
+* shipped    VeritasXR — in-browser ONNX demo, input gate, every number machine-checked
 * shipped    disaster-comm (ESP32 + LoRa + Spring Boot + cloud sync)
 * shipped    quiet-mic (PipeWire AEC), ghostseat (licence-log RCA), Airlock
 * shipped    a full Hyprland desktop shell in QML, upstreamed to surface-dots
