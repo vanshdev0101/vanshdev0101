@@ -185,6 +185,16 @@ $ printf '%s\n' "$TOOLS"
 
 <br>
 
+## `$ uptime`
+
+<img src="profile/streak.svg" width="100%" alt="contribution streak" />
+
+<br>
+
+<img src="profile/activity.svg" width="100%" alt="commit activity" />
+
+<br>
+
 </div>
 <br>
 
