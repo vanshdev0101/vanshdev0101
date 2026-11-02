@@ -42,7 +42,6 @@ drwxr-xr-x  VeritasXR/          python      chest x-ray diagnosis + uncertainty
 drwxr-xr-x  quiet-mic/          shell       pipewire echo cancellation
 drwxr-xr-x  ghostseat/          c++         flexnet licence-log root cause
 drwxr-xr-x  Orbit/              typescript  distributed job scheduler
-drwxr-xr-x  LaptopGuard/        typescript  windows endpoint monitor
 drwxr-xr-x  surface-dots/       qml         hyprland desktop shell
 ```
 
